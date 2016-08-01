@@ -26,7 +26,7 @@ sites.forEach(entry => {
 });
 
 // Love that port 80
-app.listen(80, function() {
+app.listen(80, '127.0.0.1', function() {
   // Ain't nobody gonna get in
   process.setgid('nobody');
   process.setuid('nobody');
