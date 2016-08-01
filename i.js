@@ -3,9 +3,17 @@ const app = express();
 
 const sites = require('./i.json');
 
+// Set up a basic entry page for http://i/
+app.get('/', (req, res) => {
+  const links = sites.map(x => `<a href="${x.location}">i/${x.keyword}</a>`)
+  links.forEach(link => {
+    res.send(link);
+  });
 
-app.use(express.static('static'));
+  res.end();
+});
 
+// Now for the redirects
 sites.forEach(entry => {
   const { location, keyword } = entry;
   if(!location || !keyword) {
@@ -17,7 +25,9 @@ sites.forEach(entry => {
   });
 });
 
+// Love that port 80
 app.listen(80, function() {
+  // Ain't nobody gonna get in
   process.setgid('nobody');
   process.setuid('nobody');
   // ;)
