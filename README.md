@@ -1,6 +1,8 @@
 # i
 
-A personal redirect server.
+The personal redirect server.
+
+Use your URL bar for reaching frequent sites, faster.
 
 ## Installation
 
@@ -10,8 +12,25 @@ Clone this repository, `cd` to the cloned directory, and...
 npm i
 ```
 
-## Handy Hosts
+## Configuration
 
+Create an `i.json` like so:
+
+```
+
+[
+  {
+    "location": "https://github.com/rgbkrk",
+    "keyword": "code"
+  },
+  {
+    "location": "https://docs.google.com/document/d/somedocid/edit",
+    "keyword": "write"
+  }
+]
+```
+
+## Handy Hosts
 
 Set `127.0.0.1` to `i` in `/etc/hosts`:
 
@@ -21,16 +40,4 @@ Set `127.0.0.1` to `i` in `/etc/hosts`:
 
 Then visit [http://i](i).
 
-## Configuration
-
-Create an `i.json` like so:
-
-```
-
-[
-  {
-    "location": "https://docs.google.com/document/d/somedocid/edit#",
-    "keyword": "write"
-  }
-]
-```
+:boom:
