@@ -4,14 +4,12 @@ const app = express();
 const sites = require('./i.json');
 const keywords = Object.keys(sites);
 
+const links = keywords.map(keyword => `<li><a href="${sites[keyword]}">i/${keyword}</a></li>`)
+const homepage = links.join('')
+
 // Set up a basic entry page for http://i/
 app.get('/', (req, res) => {
-  const links = keywords.map(keyword => `<a href="${sites[keyword]}">i/${keyword}</a>`)
-  links.forEach(link => {
-    res.send(link);
-  });
-
-  res.end();
+  res.send(homepage);
 });
 
 // Now for the redirects
