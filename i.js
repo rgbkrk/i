@@ -2,23 +2,19 @@ const express = require('express')
 const app = express();
 
 const sites = require('./i.json');
+const keywords = Object.keys(sites);
+
+const links = keywords.map(keyword => `<li><a href="${sites[keyword]}">i/${keyword}</a></li>`)
+const homepage = links.join('')
 
 // Set up a basic entry page for http://i/
 app.get('/', (req, res) => {
-  const links = sites.map(x => `<a href="${x.location}">i/${x.keyword}</a>`)
-  links.forEach(link => {
-    res.send(link);
-  });
-
-  res.end();
+  res.send(homepage);
 });
 
 // Now for the redirects
-sites.forEach(entry => {
-  const { location, keyword } = entry;
-  if(!location || !keyword) {
-    console.error(`entry ${entry} invalid`);
-  }
+keywords.forEach(keyword => {
+  const location = sites[keyword];
 
   app.get(`/${keyword}`, (req, res) => {
     res.redirect(location);
@@ -31,6 +27,5 @@ app.listen(80, '127.0.0.1', function() {
   process.setgid('nobody');
   process.setuid('nobody');
   // ;)
-  console.log('i is listening on port 80'); 
+  console.log('i is listening on port 80');
 });
-

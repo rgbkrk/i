@@ -26,17 +26,10 @@ To make this _actually_ handy, instead of "sorta, kinda, guess this is cool" han
 Create an `i.json` like so:
 
 ```
-
-[
-  {
-    "location": "https://github.com/rgbkrk",
-    "keyword": "code"
-  },
-  {
-    "location": "https://docs.google.com/document/d/somedocid/edit",
-    "keyword": "write"
-  }
-]
+{
+  "code": "https://github.com/rgbkrk",
+  "write": "https://docs.google.com/document/d/somedocid/edit"
+}
 ```
 
 Now run the server:
