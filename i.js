@@ -3,6 +3,7 @@ const app = express();
 
 const sites = require('./i.json');
 
+
 app.use(express.static('static'));
 
 sites.forEach(entry => {
@@ -16,8 +17,10 @@ sites.forEach(entry => {
   });
 });
 
-app.listen(1105, function() {
+app.listen(80, function() {
+  process.setgid('nobody');
+  process.setuid('nobody');
   // ;)
-  console.log('i is listening on 1105'); 
+  console.log('i is listening on port 80'); 
 });
 

@@ -4,7 +4,7 @@
   "description": "A personal redirect server.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon i.js"
+    "start": "sudo nodemon i.js"
   },
   "author": "",
   "license": "BSD-3-Clause",
