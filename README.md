@@ -30,6 +30,12 @@ Create an `i.json` like so:
 ]
 ```
 
+Now run the server:
+
+```
+npm run start
+```
+
 ## Handy Hosts
 
 Set `127.0.0.1` to `i` in `/etc/hosts`:
