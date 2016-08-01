@@ -12,6 +12,15 @@ Clone this repository, `cd` to the cloned directory, and...
 npm i
 ```
 
+To make this _actually_ handy, instead of "sorta, kinda, guess this is cool" handy, you need to add `i` as a hostname for `127.0.0.1` within `/etc/hosts`. Example `/etc/hosts`:
+
+```
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost
+127.0.0.1 i
+```
+
 ## Configuration
 
 Create an `i.json` like so:
@@ -36,14 +45,10 @@ Now run the server:
 npm run start
 ```
 
-## Handy Hosts
+## Using
 
-Set `127.0.0.1` to `i` in `/etc/hosts`:
+Now visit one of your keywords, like `http://i/code`. It should redirect.
 
-```
-127.0.0.1   i
-```
-
-Then visit [http://i](i).
+If you visit [http://i](http://i), you'll get a listing of all your keywords.
 
 :boom:
