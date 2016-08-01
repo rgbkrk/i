@@ -3,6 +3,8 @@ const app = express();
 
 const sites = require('./i.json');
 
+app.use(express.static('static'));
+
 sites.forEach(entry => {
   const { location, keyword } = entry;
   if(!location || !keyword) {
@@ -15,6 +17,7 @@ sites.forEach(entry => {
 });
 
 app.listen(1105, function() {
-  console.log('i am listening on 1105'); 
+  // ;)
+  console.log('i is listening on 1105'); 
 });
 
