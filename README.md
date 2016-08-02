@@ -16,9 +16,11 @@ You can live like this too. It's like a console for your browsing.
 
 ## Installation
 
-Clone this repository, `cd` to the cloned directory, and...
+Clone this repository, `cd` to the cloned directory, and install this package.
 
 ```
+git clone https://github.com/rgbkrk/i
+cd i
 npm i
 ```
 
