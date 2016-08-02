@@ -21,6 +21,8 @@ To make this _actually_ handy, instead of "sorta, kinda, guess this is cool" han
 127.0.0.1 i
 ```
 
+NOTE: You could make this use another keyword like `go`, `yo`, or even `froyo`.
+
 ## Configuration
 
 Create an `i.json` like so:
