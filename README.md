@@ -2,7 +2,9 @@
 
 Personal redirect server.
 
-Use your URL bar for reaching frequent sites, faster. My workflow with this:
+Use your URL bar for reaching frequent sites, faster. Largely inspired by corporate environments that set an aliasing/tinyURL service up at http://go/. This one is for your _personal use_.
+
+My workflow with this:
 
 1. Type `i write` in the URL bar
 2. :boom: redirected to my worklog
