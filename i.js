@@ -1,7 +1,13 @@
 const express = require('express')
 const app = express()
 
-const sites = require('./i.json')
+const defaultSites = {
+  i: 'https://github.com/rgbkrk/i',
+}
+const userSites = require('./i.json')
+
+// Merge users and defaults, taking precedence on user defined
+const sites = Object.assign({}, defaultSites, userSites)
 const keywords = Object.keys(sites)
 
 const links = keywords.map(keyword => `<li><a href="${sites[keyword]}">/${keyword}</a></li>`)
