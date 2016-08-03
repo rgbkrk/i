@@ -1,6 +1,10 @@
 const express = require('express')
 const app = express()
 
+const hostile = require('hostile')
+
+hostile.set('127.0.0.1', 'i')
+
 const defaultSites = {
   i: 'https://github.com/rgbkrk/i',
 }
