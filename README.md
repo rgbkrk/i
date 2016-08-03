@@ -26,17 +26,6 @@ cd i
 npm i
 ```
 
-To make this _actually_ handy, instead of "sorta, kinda, guess this is cool" handy, you need to add `i` as a hostname for `127.0.0.1` within `/etc/hosts`. Example `/etc/hosts`:
-
-```
-127.0.0.1	localhost
-255.255.255.255	broadcasthost
-::1             localhost
-127.0.0.1 i
-```
-
-NOTE: You could make this use another keyword like `go`, `yo`, or even `froyo`.
-
 ## Configuration
 
 Create an `i.json` like so:
