@@ -27,6 +27,12 @@ keywords.forEach(keyword => {
   })
 })
 
+// 404 for all else
+app.use(function(req, res) {
+  const keyword = req.url.split('/').slice(1).join('/');
+  res.status(404).send(`<b>${keyword}</b> does not exist, maybe you should add it`);
+});
+
 // Love that port 80
 app.listen(80, '127.0.0.1', function() {
   // Ain't nobody gonna get in
