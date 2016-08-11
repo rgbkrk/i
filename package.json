@@ -1,8 +1,11 @@
 {
-  "name": "i",
+  "name": "i-robot",
   "version": "1.0.0",
   "description": "A personal redirect server.",
   "main": "index.js",
+  "bin": {
+    "i": "i.js"
+  },
   "scripts": {
     "start": "sudo nodemon i.js"
   },
